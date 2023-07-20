@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: monospace;
+}
+
+body {
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: black;
+  color: aliceblue;
+  background: rgb(238, 162, 8);
+  background: linear-gradient(180deg, rgba(238, 162, 8, 0.9553960755813954) 50%, rgba(0, 0, 0, 1) 50%);
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  gap: 30px;
+}
+
+.title {
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.game-screen {
+  width: 340px;
+  height: 320px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.card {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  background-color: #80cbc4;
+  border-radius: .4rem;
+  transform: rotateY(180deg);
+  transition: .3s;
+
+
+}
+
+.card.cardOpen {
+  transform: rotateY(0deg);
+}
+
+.card:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #00695c;
+  transform: rotateY(0deg);
+  border-radius: .4rem;
+  backface-visibility: hidden;
+}
+
+.cardOpen::after,
+.cardMatch::after {
+  transform: rotateY(180deg);
+
+}
+
+
+
+.reset {
+  padding: .3rem .7rem;
+  text-transform: uppercase;
+  font-weight: bolder;
+  background-color: green;
+  border: none;
+  border-radius: .4rem;
+  color: aliceblue;
+}
+
+.reset:focus {
+  background-color: lightgreen;
+  color: black;
+}
+
+.glass {
+  background: linear-gradient(135deg,
+      rgba(255, 255, 255, 0.2) 0%,
+      rgba(255, 255, 255, 0) 100%);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
