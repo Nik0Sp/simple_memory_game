@@ -57,7 +57,7 @@ body {
   border-radius: .4rem;
   transform: rotateY(180deg);
   transition: .3s;
-
+  cursor: pointer;
 
 }
 
@@ -69,7 +69,7 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: #00695c;
+  background-color: #47978d;
   transform: rotateY(0deg);
   border-radius: .4rem;
   backface-visibility: hidden;

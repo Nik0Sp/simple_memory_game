@@ -56,7 +56,7 @@ function MemoryGame() {
       <h1 className="title">Simple Memory Game</h1>
       <div className="container glass">
         <div className="game-screen"></div>
-        <button className="reset" onClick={() => window.location.reload()}>
+        <button className="reset " onClick={() => window.location.reload()}>
           reset
         </button>
       </div>
